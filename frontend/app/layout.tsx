@@ -1,11 +1,9 @@
+import type { Metadata } from 'next'
 import './globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Alibaba Supplier Scraper',
-  description: 'Search and discover suppliers on Alibaba with ease',
+export const metadata: Metadata = {
+  title: 'Alibaba Supplier Finder',
+  description: 'Find and compare suppliers from Alibaba with ease',
 }
 
 export default function RootLayout({
@@ -15,11 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-100">
-          {children}
-        </div>
-      </body>
+      <body className="min-h-screen bg-white">{children}</body>
     </html>
   )
 }
