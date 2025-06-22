@@ -44,7 +44,16 @@ export default function SearchForm({ onSubmit, isLoading }: SearchFormProps) {
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
               placeholder="e.g., corn grain, soybean, electronics..."
-              className="w-full pl-10 pr-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-pinkAccent-500 focus:border-pinkAccent-500 transition-colors disabled:bg-zinc-100 disabled:text-zinc-500"
+              className="w-full px-4 py-3 pl-12 rounded-xl border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-pinkAccent-500 focus:border-pinkAccent-500 text-zinc-800 placeholder-zinc-400 transition-all duration-200 disabled:bg-zinc-100 disabled:text-zinc-500"
+              style={{ outline: 'none', boxShadow: 'none' }}
+              onFocus={(e) => {
+                e.target.style.boxShadow = '0 0 0 2px rgba(236, 72, 153, 0.2)';
+                e.target.style.borderColor = '#ec4899';
+              }}
+              onBlur={(e) => {
+                e.target.style.boxShadow = 'none';
+                e.target.style.borderColor = '#e4e4e7';
+              }}
               disabled={isLoading}
               required
             />
