@@ -16,7 +16,7 @@ CORS(app) # Enable CORS for all routes, allowing your frontend to access it
 # It's better to initialize it once if it's stateless, or per request if stateful
 # For simplicity, we'll initialize it once here.
 # Consider using a queue or background tasks for long-running scraping jobs in production.
-scraper = AlibabaSupplierScraper(headless=True) # Set to True for production, False for debugging
+scraper = AlibabaSupplierScraper(headless=False) # Set to True for production, False for debugging
 
 @app.route('/scrape', methods=['POST'])
 def scrape_alibaba():

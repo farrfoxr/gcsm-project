@@ -106,7 +106,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-16 text-center text-zinc-500 text-sm">
           <p>
-            Alibaba Supplier Finder - Find and compare suppliers with ease
+            &copy; 2025 Anne Trulyta & Jessica. All rights reserved.
           </p>
         </footer>
       </div>
